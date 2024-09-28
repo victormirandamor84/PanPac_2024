@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 8781839011812859730}
   - component: {fileID: 7370522239151550698}
   - component: {fileID: 2998590090704475243}
+  - component: {fileID: 5213692470065647783}
   m_Layer: 0
   m_Name: TPS_controller_AMY
   m_TagString: Jugador
@@ -150,6 +151,20 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!136 &5213692470065647783
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8781839011812859726}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.2759499
+  m_Height: 2.0123293
+  m_Direction: 1
+  m_Center: {x: 0, y: 1.005922, z: -0.0067006946}
 --- !u!1 &8781839013438221026
 GameObject:
   m_ObjectHideFlags: 0
