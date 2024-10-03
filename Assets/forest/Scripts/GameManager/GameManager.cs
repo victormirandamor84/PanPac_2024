@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour{
 	public static int HighScore;
 	
     [SerializeField] AudioOptions _AudioOptions;
-    [SerializeField] GameObject Player, Player1,Player2;
+    [SerializeField] GameObject Player;
     [SerializeField] Vector3 position;
     public float espera_Reespawn;
     [SerializeField]  string Tag_Seguir="player";
@@ -27,7 +27,7 @@ public class GameManager : MonoBehaviour{
     
     public string NexLevel;
     public GameState currentGameState;
-    [SerializeField]float volMusic, volSFX;
+    //[SerializeField]float volMusic, volSFX;
 
     [Header ("Sound Efects")]    
     public AudioClip Dead;
@@ -116,15 +116,6 @@ public class GameManager : MonoBehaviour{
 			Time.timeScale = 0.5f;
             Invoke("NextLive", espera_Reespawn);
         }
-    }
-    
-    public void PlayerChoise(int value) {
-        if(value==1){
-            Instantiate(Player1,position,Quaternion.identity);
-        }
-        if (value==2){
-            Instantiate(Player2,position,Quaternion.identity);
-    }
     }
 
     void SearchManagers() {

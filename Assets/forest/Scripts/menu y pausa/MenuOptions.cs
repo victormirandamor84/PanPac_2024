@@ -6,23 +6,24 @@ using UnityEngine.UI;
 
 public class MenuOptions : MonoBehaviour {
 	#region
-	public Dropdown Quality, Resolution, Shadow, Vsync,Fullscreen;
+	public Dropdown Quality, Resolution;
+	//, Shadow, Vsync,Fullscreen;
 	//public Toggle Fullscreen;
-	public bool Full;
+	//public bool Full;
 	#endregion
 	#region
 	public void SetResolution (int Level){
 		if(Level==0){
-			Screen.SetResolution(848, 480, Full);
+			Screen.SetResolution(848, 480, true);
 		}
 		if(Level==1){
-			Screen.SetResolution(1024, 600, Full);
+			Screen.SetResolution(1024, 600, true);
 		}
 		if(Level==2){
-			Screen.SetResolution(1280, 720, Full);
+			Screen.SetResolution(1280, 720, true);
 		}
 		if(Level==3){
-			Screen.SetResolution(1920, 1080, Full);
+			Screen.SetResolution(1920, 1080, true);
 		}		 
 	}	
 	public void Set_antiAliasing(int Level){
@@ -72,10 +73,10 @@ public class MenuOptions : MonoBehaviour {
 	public void fullScreen(int Level){
 		if(Level==0){
 			Screen.fullScreen = false;
-			Full=false;
+			//Full=false;
 		}else if(Level==1){
 			Screen.fullScreen = true;
-			Full=true;
+			//Full=true;
 		}
 	}
 	public void GetVsync(int Vsync){
@@ -98,16 +99,16 @@ public class MenuOptions : MonoBehaviour {
 	void OnDisable(){
 		PlayerPrefs.SetInt ("SetQuality",Quality.value);
 		PlayerPrefs.SetInt ("SetResolucion",Resolution.value);
-		PlayerPrefs.SetInt ("SetShadows",Shadow.value);		
-		PlayerPrefs.SetInt ("SetVsync",Vsync.value);
-		PlayerPrefs.SetInt ("SetFullScreen",Fullscreen.value);
+		//PlayerPrefs.SetInt ("SetShadows",Shadow.value);		
+		//PlayerPrefs.SetInt ("SetVsync",Vsync.value);
+		//PlayerPrefs.SetInt ("SetFullScreen",Fullscreen.value);
 	}	
 	void Awake(){
 		Quality.value=PlayerPrefs.GetInt ("SetQuality");
 		Resolution.value=PlayerPrefs.GetInt ("SetResolucion");
-		Shadow.value=PlayerPrefs.GetInt ("SetShadows");
-		Vsync.value=PlayerPrefs.GetInt ("SetVsync");
-		Fullscreen.value=PlayerPrefs.GetInt ("SetFullScreen");
+		//Shadow.value=PlayerPrefs.GetInt ("SetShadows");
+		//Vsync.value=PlayerPrefs.GetInt ("SetVsync");
+		//Fullscreen.value=PlayerPrefs.GetInt ("SetFullScreen");
 	}
 		
 	#endregion
